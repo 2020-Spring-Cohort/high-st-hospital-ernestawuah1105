@@ -1,9 +1,12 @@
 
 public class Nurse extends Employee {
     int numPatients;
+    int num;
 
     public Nurse(String name, int id) {
         super(name, id, 50000 );
+
+
     }
 //    public Nurse(String name) {
 //        super(name, 50000);

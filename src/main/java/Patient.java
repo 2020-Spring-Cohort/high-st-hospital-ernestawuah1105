@@ -1,22 +1,36 @@
 public class Patient {
-    public int bloodLevel = 20;
+    private String name;
+    private int patientID;
+    private int bloodLevel ;
+    private int healthLevel;
+
+    public Patient(String name, int patientID, int bloodLevel, int healthLevel) {
+        this.name = name;
+        this.patientID = patientID;
+        this.bloodLevel =20;
+        this.healthLevel =15;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPatientID() {
+        return patientID;
+    }
 
     public int getBloodLevel() {
         return bloodLevel;
     }
 
-    public void bloodDrawn(int amountToDraw) {
-        this.bloodLevel -= amountToDraw;
+    public int getHealthLevel() {
+        return healthLevel;
     }
+    public void giveBloodToNurse() {bloodLevel -=3; }
 
-    public int getHEALTH_LEVEL() {
-        return HEALTH_LEVEL;
-    }
+    public void receiveCareFromNurse() {healthLevel +=2; }
 
-    public void setHEALTH_LEVEL(int HEALTH_LEVEL) {
-        this.HEALTH_LEVEL = HEALTH_LEVEL;
-    }
+    public void giveBloodToDoctor () {bloodLevel -=4; }
 
-    public int HEALTH_LEVEL =10;
-
-}
+    public void receiveCareFromDoctor() { healthLevel +=6; }
