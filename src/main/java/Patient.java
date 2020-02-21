@@ -4,7 +4,7 @@ public class Patient {
     private int bloodLevel ;
     private int healthLevel;
 
-    public Patient(String name, int patientID, int bloodLevel, int healthLevel) {
+    public Patient(String name, int patientID) {
         this.name = name;
         this.patientID = patientID;
         this.bloodLevel =20;
@@ -34,3 +34,10 @@ public class Patient {
     public void giveBloodToDoctor () {bloodLevel -=4; }
 
     public void receiveCareFromDoctor() { healthLevel +=6; }
+
+    @Override
+    public String toString() {
+        return "name= " + name
+                + ", patient ID= " + patientID
+                + ", bloodLevel= " + bloodLevel +
+                ", healthLevel= " + healthLevel;

@@ -1,42 +1,45 @@
+import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Nurse extends Employee {
-    int numPatients;
-    int num;
-
-    public Nurse(String name, int id) {
-        super(name, id, 50000 );
+ public class Nurse extends Employee implements MedicalStaff{
+    HashMap<Integer, Patient> patientsList = new HashMap<>();
 
 
+    public Nurse (String name, int IDNumber, boolean isPaid){
+        super(name, IDNumber, isPaid);
     }
-//    public Nurse(String name) {
-//        super(name, 50000);
-//    }
+    @Override
+    public int paySalary() {
+        return 50000;
+    }
 
-//    public void paySalary() {
-//        public  void paySalary() {
-//            if (paid) {
-//                return;
-//            else{
-//                    paid = true
-//                }
-//            }
-//
-//            }
-//
-//    }
-//
-//    public void drawBlood(Patient patient) {
-//        int bloodLevel.patient.getBlodd_level();
-//        if(bloodLevel<=5) {
-//            retrun;
-//        } else {
-//            patient.setBLOOD_LEVELbloodlevel-5);
-//        }
-//
-//    }
+    public HashMap<Integer, Patient> getPatientsList(){
+        return patientsList;
+    }
+
+    public void addPatientToPatientsList(int patientID, Patient testPatient){
+        patientsList.put(patientID, testPatient);
+    }
 
 
 
+
+
+    @Override
+    public void drawBlood(Patient testPatient) {
+        testPatient.giveBloodToNurse();
+    }
+
+    @Override
+    public void careForPatient(Patient testPatient) {
+        testPatient.receiveCareFromNurse();
+    }
+    @Override
+    public String toString() {
+        return "Position= nurse, name= " + getName()
+                + ", ID Number= " + getIDNumber()
+                + ", number of patients= " + patientsList.size()
+                + ", salary= " + paySalary()
+                + ", is paid= " + getIsPaid();
+    }
 }
-
-

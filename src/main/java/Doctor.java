@@ -1,33 +1,39 @@
+public class Doctor extends Employee implements MedicalStaff {
+    String specialty;
 
-public class Doctor extends Employee {
-
-    String speciality;
-
-    public Doctor(String name, int id, String speciality) {
-        super(name, id, 90000);
-        this.speciality = speciality;
-
+    public Doctor(String name, int IDNumber, boolean isPaid, String specialty){
+        super(name, IDNumber, isPaid);
+        this.specialty = specialty;
     }
-    public String getSpeciality() {return speciality}
 
-    public int paySalary() {return 90000}
+    public String getSpecialty(){
+        return specialty;
+    }
+
+    @Override
+    public int paySalary() {
+        return 90000;
+    }
 
     @Override
     public String toString() {
-        return "Position= doctor"
+        return "Position= doctor, name= " + getName() + ", ID Number= " + getIDNumber() +
+                ", specialty='" + specialty + ", salary= " + paySalary() + ", is paid= " + getIsPaid();
     }
 
-
-
-
-
-    public void drawBlood(Patient testPateint) {
-        testPateint.giveBloodToDoctor();
+    @Override
+    public void drawBlood(Patient testPatient) {
+        testPatient.giveBloodToDoctor();
     }
 
-
-    public void careForPatient(Patient testPateint) {
-        testPateint.receiveCareFromDoctor();
+    @Override
+    public void careForPatient(Patient testPatient) {
+        testPatient.receiveCareFromDoctor();
     }
 
 }
+
+
+
+
+
