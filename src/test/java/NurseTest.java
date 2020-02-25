@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class NurseTest {
     @Test
     public void nurseCanAddPatientsToList(){
-        Nurse underTest = new Nurse("testNurse", 3, false);
+        Nurse underTest = new Nurse("testNurse", 3, 672);
         Patient testPatient = new Patient("testPatient", 1);
         underTest.addPatientToPatientsList(1, testPatient);
         int result = underTest.getPatientsList().size();
@@ -15,7 +15,7 @@ public class NurseTest {
     }
     @Test
     public void nurseCanDrawBlood(){
-        Nurse underTest = new Nurse("testNurse", 3, false);
+        Nurse underTest = new Nurse("testNurse", 3, 739);
         Patient testPatient = new Patient("testPatient", 1);
         underTest.drawBlood(testPatient);
         int result = testPatient.getBloodLevel();
@@ -23,11 +23,11 @@ public class NurseTest {
     }
     @Test
     public void nurseCanProvideCare(){
-        Nurse underTest = new Nurse("testNurse", 3, false);
+        Nurse underTest = new Nurse("testNurse", 3, 719);
         Patient testPatient = new Patient("testPatient", 1);
         underTest.careForPatient(testPatient);
         int result = testPatient.getHealthLevel();
-        assertEquals(15, result);
+        assertEquals(17, result);
     }
 
 

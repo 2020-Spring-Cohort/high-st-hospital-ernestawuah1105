@@ -6,7 +6,7 @@ public class JanitorTest {
 
     @Test
     public void janitorSweeps(){
-        Janitor underTest = new Janitor("testName", 5, false, false);
+        Janitor underTest = new Janitor("testName", 5, 729, false);
         underTest.Sweep();
         boolean result = underTest.getIsSweeping();
         assertTrue(result);

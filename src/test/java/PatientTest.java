@@ -16,7 +16,7 @@ public class PatientTest {
     public void patientShouldHaveHealthLevelOfTen(){
         Patient underTest = new Patient("testPatient", 1);
         int result = underTest.getHealthLevel();
-        assertEquals(10, result);
+        assertEquals(15, result);
     }
     @Test
     public void patientShouldGiveBloodToNurse(){
@@ -30,20 +30,20 @@ public class PatientTest {
         Patient underTest = new Patient("testPatient", 1);
         underTest.receiveCareFromNurse();
         int result = underTest.getHealthLevel();
-        assertEquals(15, result);
+        assertEquals(17, result);
     }
     @Test
     public void patientShouldGiveBloodToDoctor(){
         Patient underTest = new Patient("testPatient", 1);
         underTest.giveBloodToDoctor();
         int result = underTest.getBloodLevel();
-        assertEquals(15, result);
+        assertEquals(16, result);
     }
     @Test
     public void patientShouldReceiveCareFromDoctor(){
         Patient underTest = new Patient("testPatient", 1);
         underTest.receiveCareFromDoctor();
         int result = underTest.getHealthLevel();
-        assertEquals(20, result);
+        assertEquals(21, result);
     }
 }

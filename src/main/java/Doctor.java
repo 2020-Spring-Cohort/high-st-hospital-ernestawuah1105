@@ -1,8 +1,8 @@
 public class Doctor extends Employee implements MedicalStaff {
     String specialty;
 
-    public Doctor(String name, int IDNumber, boolean isPaid, String specialty){
-        super(name, IDNumber, isPaid);
+    public Doctor(String name, int IDNumber, int payRate , String specialty){
+        super(name, IDNumber, payRate);
         this.specialty = specialty;
     }
 

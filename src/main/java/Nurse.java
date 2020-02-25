@@ -5,8 +5,7 @@ import java.util.HashMap;
     HashMap<Integer, Patient> patientsList = new HashMap<>();
 
 
-    public Nurse (String name, int IDNumber, boolean isPaid){
-        super(name, IDNumber, isPaid);
+    public Nurse (String name, int IDNumber, int payRate){ super(name, IDNumber, payRate);
     }
     @Override
     public int paySalary() {

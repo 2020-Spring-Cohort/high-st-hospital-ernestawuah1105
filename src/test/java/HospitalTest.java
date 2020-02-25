@@ -15,11 +15,11 @@ public class HospitalTest {
     @BeforeEach
     void setUp(){
         underTest = new Hospital();
-        testEmployee = new Employee("testEmployee", 0, false);
+        testEmployee = new Employee("testEmployee", 0,  345);
     }
     @Test
     public void canAddEmployeeToList() {
-        underTest.addEmployeeToCheckList();List(testEmployee);
+        underTest.addEmployeeToCheckList(testEmployee);
         assertEquals(1, underTest.size());
     }
 

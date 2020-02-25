@@ -1,8 +1,8 @@
 public class Receptionist extends Employee {
     private boolean onPhone;
 
-    public Receptionist(String name, int IDNumber, boolean isPaid, boolean onPhone){
-        super(name, IDNumber, isPaid);
+    public Receptionist(String name, int IDNumber, int payRate, boolean onPhone){
+        super(name, IDNumber, payRate);
         this.onPhone = onPhone;
     }
 

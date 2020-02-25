@@ -1,7 +1,7 @@
 public class Janitor extends Employee{
     private boolean isSweeping;
-    public Janitor(String name, int IDNumber, boolean isPaid, boolean isSweeping){
-        super(name, IDNumber, isPaid);
+    public Janitor(String name, int IDNumber, int payRate, boolean isSweeping){
+        super(name, IDNumber, payRate);
         this.isSweeping = isSweeping;
     }
     public boolean getIsSweeping(){

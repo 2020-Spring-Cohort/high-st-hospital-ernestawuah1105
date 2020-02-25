@@ -1,4 +1,4 @@
-public abstract class Employee {
+public class Employee {
 
     private String employeeName;
     private int employeeNumber;
@@ -42,8 +42,25 @@ public abstract class Employee {
     }
 
 
+    public String getName() {
+        return employeeName;
+    }
+
+    public int getIDNumber() {
+        return employeeNumber;
+    }
+
+    public int paySalary() {
+        return 0;
 
 
+    }
 
+    public boolean getIsPaid() {
+        return paid;
+    }
 
+    public void receivePay() {
+        paid = true;
+    }
 }
